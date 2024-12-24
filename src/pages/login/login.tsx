@@ -1,16 +1,10 @@
-import { ThemeProvider } from "@emotion/react";
+import { TextField, Button, Container, Typography } from '@mui/material';
 
-import { theme } from "@muc/styles";
-import { Login } from "@muc/pages";
+import React from 'react';
 
-import { Container , Typography , TextField , Button } from "@mui/material";
-
-
-function App() {
-  //@ts-ignore
-  return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth="sm">
+export default function Login(): React.ReactElement {
+    return (
+        <Container maxWidth="sm">
             <Typography variant="h4" component="h1" gutterBottom>
                 Login
             </Typography>
@@ -41,8 +35,5 @@ function App() {
                 </Button>
             </form>
         </Container>
-    </ThemeProvider>
-  );
+    );
 }
-
-export default App;
