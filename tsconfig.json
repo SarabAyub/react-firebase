@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["vite/client"], // Removed 'node' as it's unnecessary for a frontend app
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "paths": {
+      "@muc/components": ["src/components/components.ts"],
+      "@muc/constant": ["src/constants/constants.ts"],
+      "@muc/modules": ["src/modules/module.ts"],
+      "@muc/routes": ["src/constants/routes.ts"],
+      "@muc/core": ["src/core/core.ts"],
+      "@muc/screens": ["src/screens/screen.ts"],
+      "@muc/styles": ["src/styles/theme.ts"],
+      "@muc/layout": ["src/layout/layout.ts"],
+      "@muc/hooks": ["src/hooks/hooks.ts"],
+      "@muc/types": ["src/types/types.ts"],
+      "@muc/validations": ["src/validations/validations.ts"],
+      "@muc/providers": ["src/providers/providers.ts"],
+      "@muc/context": ["src/context/context.ts"],
+      "@muc/firebase": ["src/firebase/firebase.ts"],
+      "@muc/models": ["src/firebase/models/models.ts"],
+      "@muc/utils": ["src/utils/utils.ts"],
+    },
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}
