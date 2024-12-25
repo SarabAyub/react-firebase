@@ -12,9 +12,10 @@ interface ButtonProps {
   height?: string;
   borderRadius?: string;
   isLoading?: boolean;
+  bgColor?: string; 
 }
 
-const CommonButton: React.FC<ButtonProps> = (props) => {
+const CommonButton: React.FC<ButtonProps> = (properties) => {
   const {
     title,
     type,
@@ -25,14 +26,16 @@ const CommonButton: React.FC<ButtonProps> = (props) => {
     height,
     borderRadius,
     isLoading = false,
-  } = props || {};
+    bgColor
+  } = properties || {};
   return (
-    <Box>
+    <Box sx={{marginTop: '10px'}}>
       <Button
         type={type ? type : "button"}
         variant={variant}
         onClick={onClick}
         disabled={disabled}
+        
         sx={{
           display: "flex",
           right: 0,
@@ -48,8 +51,10 @@ const CommonButton: React.FC<ButtonProps> = (props) => {
           color:
             variant === "outlined" ? COLORS.primary.main : COLORS.white.main,
           textTransform: "none",
-          border: `1px solid ${COLORS.primary.main}`,
+          border: `1px solid ${COLORS.gray.OutlineGray}`,
           borderRadius: borderRadius ? borderRadius : "8px",
+          bgcolor:
+            variant === "outlined" ? COLORS.white.main : bgColor ? bgColor : COLORS.primary.main,
           "&:hover": {
             bgcolor:
               variant === "outlined" ? "transparent" : COLORS.primary.main,

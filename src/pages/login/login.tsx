@@ -1,39 +1,74 @@
-import { TextField, Button, Container, Typography } from '@mui/material';
-
+import { Box, Button, Container, Typography } from '@mui/material';
+import { CustomTextField, CommonButton } from '@muc/components';
 import React from 'react';
+import { useForm, FormProvider } from 'react-hook-form';
+import { COLORS } from '@muc/constant';
 
-export default function Login(): React.ReactElement {
+interface LoginProps { }
+
+const Login: React.FC<LoginProps> = (): React.ReactElement => {
+    const methods = useForm();
+
+    const onSubmit = (data: any) => {
+        console.log(data);
+    };
+
     return (
-        <Container maxWidth="sm">
+        <Box
+            style={{
+            backgroundColor: COLORS.blue.main,
+            minHeight: '100vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
+            }}
+        >
+            <Container
+            maxWidth="xs"
+            style={{
+                backgroundColor: COLORS.white.main,
+                padding: '20px',
+                borderRadius: '10px'
+            }}
+            >
             <Typography variant="h4" component="h1" gutterBottom>
                 Login
             </Typography>
-            <form noValidate autoComplete="off">
-                <TextField
+            <FormProvider {...methods}>
+                <form noValidate autoComplete="off" onSubmit={methods.handleSubmit(onSubmit)}>
+                <CustomTextField
+                    name="email"
                     label="Email"
-                    variant="outlined"
-                    margin="normal"
-                    fullWidth
-                    required
+                    type="text"
+                    placeHolder="Enter your email"
+                    width="100%"
+                    rules={{ required: 'Email is required' }}
                 />
-                <TextField
+                <CustomTextField
+                    name="password"
                     label="Password"
                     type="password"
-                    variant="outlined"
-                    margin="normal"
-                    fullWidth
-                    required
+                    placeHolder="Enter your password"
+                    width="100%"
+                    rules={{ required: 'Password is required' }}
                 />
-                <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    style={{ marginTop: '16px' }}
-                >
-                    Login
-                </Button>
-            </form>
-        </Container>
+                <Typography variant="body2" style={{ textAlign: 'right', marginTop: '8px' }}>
+                    Forgot password?
+                </Typography>
+                {/* <Box style={{ marginTop: '16px', backgroundColor: COLORS.blue.navyBlue }}> */}
+                    <CommonButton
+                        type="submit"
+                        variant="contained"
+                        title="Login"
+                        width="100%"
+                        bgColor={COLORS.blue.navyBlue}
+                    />
+                {/* </Box> */}
+                </form>
+            </FormProvider>
+            </Container>
+        </Box>
     );
 }
+
+export default Login;

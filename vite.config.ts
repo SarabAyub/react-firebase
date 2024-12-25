@@ -26,6 +26,7 @@ export default defineConfig({
       "@muc/firebase": path.resolve(__dirname, "./src/firebase/firebase.ts"),
       "@muc/models": path.resolve(__dirname, "./src/firebase/mdels/models.ts"),
       "@muc/utils": path.resolve(__dirname, "./src/utils/utils.ts"),
+      "@muc/pages": path.resolve(__dirname, "./src/pages/pages.ts"),
       "@muc/validations": path.resolve(
         __dirname,
         "src/validations/validations.ts"
