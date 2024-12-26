@@ -3,14 +3,17 @@ import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
 import { StyledContainer, Heading, StyledButton, FlexEndRow } from './Login.styles'
+import { useNavigate } from 'react-router-dom';
 
 interface LoginProps { }
 
 const Login: React.FC<LoginProps> = (): React.ReactElement => {
     const methods = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = (data: any) => {
         console.log(data);
+        navigate('/2fa');
     };
 
     return (
@@ -39,7 +42,7 @@ const Login: React.FC<LoginProps> = (): React.ReactElement => {
                             fontFamily='Inter , sans-serif'
                         />
                         <FlexEndRow>
-                            <StyledButton>
+                            <StyledButton onClick={() => navigate('/reset-password')}>
                                 Forgot password?
                             </StyledButton>
                         </FlexEndRow>

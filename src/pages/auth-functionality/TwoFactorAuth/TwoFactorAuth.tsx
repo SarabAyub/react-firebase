@@ -2,7 +2,6 @@ import { CustomTextField, CommonButton } from '@muc/components';
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
-import { AuthLayout } from '@muc/layout';
 import { ButtonWrapper, Heading, StyledContainer } from '../login/Login.styles';
 
 interface TwoFactorAuthProps { }
