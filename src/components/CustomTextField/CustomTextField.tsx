@@ -18,6 +18,7 @@ interface CustomTextFieldProps {
   placeHolder: string;
   width: string;
   defaultValue?: string;
+  fontFamily?: string;
 }
 
 const CustomTextField: React.FC<CustomTextFieldProps> = ({
@@ -28,6 +29,7 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
   placeHolder,
   width,
   defaultValue,
+  fontFamily,
   ...props
 }) => {
   const { control } = useFormContext();
@@ -43,10 +45,11 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
         fontSize: "16px",
         color: COLORS.primary.main,
         lineHeight: "20px",
-        pb: 1,
+        pb: 2,
         display: "flex",
         alignItems: "center",
         gap: "20px",
+        fontFamily: fontFamily? fontFamily : '',
       }}
       >
       {label}

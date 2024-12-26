@@ -29,7 +29,7 @@ const CommonButton: React.FC<ButtonProps> = (properties) => {
     bgColor
   } = properties || {};
   return (
-    <Box sx={{marginTop: '10px'}}>
+    <Box>
       <Button
         type={type ? type : "button"}
         variant={variant}

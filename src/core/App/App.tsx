@@ -1,14 +1,13 @@
 import { ThemeProvider } from "@emotion/react";
 
 import { theme } from "@muc/styles";
-import { Login } from "@muc/pages";
-
+import Routes from "../Routes/Routes";
 
 function App() {
   //@ts-ignore
   return (
     <ThemeProvider theme={theme}>
-        <Login />
+        <Routes/>
     </ThemeProvider>
   );
 }
