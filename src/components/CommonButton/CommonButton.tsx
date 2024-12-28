@@ -51,13 +51,13 @@ const CommonButton: React.FC<ButtonProps> = (properties) => {
           color:
             variant === "outlined" ? COLORS.primary.main : COLORS.white.main,
           textTransform: "none",
-          border: `1px solid ${COLORS.gray.OutlineGray}`,
+          border: `1px solid ${bgColor ? bgColor : COLORS.blue.main}`,
           borderRadius: borderRadius ? borderRadius : "8px",
           bgcolor:
-            variant === "outlined" ? COLORS.white.main : bgColor ? bgColor : COLORS.primary.main,
+            variant === "outlined" ? COLORS.white.main : bgColor ? bgColor : COLORS.blue.main,
           "&:hover": {
             bgcolor:
-              variant === "outlined" ? "transparent" : COLORS.primary.main,
+              variant === "outlined" ? "transparent" : 'none',
             boxShadow: "none",
           },
         }}

@@ -3,6 +3,7 @@ export const ROUTES = {
     LOGIN: "/login",
     RESET_PASSWORD: "/reset-password",
     TWO_FACTOR_AUTH: "/2fa",
+    TERMS_CONDITIONS: "/terms-conditions",
   },
   WEB_APP: {
     PATIENT: "/patients",

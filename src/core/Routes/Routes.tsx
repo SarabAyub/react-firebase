@@ -7,6 +7,7 @@ import {
   Login,
   ResetPassword,
   TwoFactorAuth,
+  TermsConditions,
 } from "@muc/pages";
 import ProtectedRoute from "./ProtectedRoute";
 const Routes = () => {
@@ -18,6 +19,7 @@ const Routes = () => {
         <Route path={ROUTES.AUTH.LOGIN} element={<Login />} />
         <Route path={ROUTES.AUTH.RESET_PASSWORD} element={<ResetPassword />} />
         <Route path={ROUTES.AUTH.TWO_FACTOR_AUTH} element={<TwoFactorAuth />} />
+        <Route path={ROUTES.AUTH.TERMS_CONDITIONS} element={<TermsConditions />} />
 
         {/* <Route path={ROUTES.AUTH.SIGN_UP} element={<SignupContainer />} />
         <Route
