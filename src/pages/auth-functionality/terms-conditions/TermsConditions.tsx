@@ -1,6 +1,7 @@
 import { CommonButton } from '@muc/components';
 import React from 'react';
 import { COLORS } from '@muc/constant';
+import { ROUTES } from '@muc/routes';
 import { StyledContainer, Heading, FlexRow } from './TermsConditions.styles'
 import { useNavigate } from 'react-router-dom';
 
@@ -40,7 +41,7 @@ const TermsConditions: React.FC<TermsConditionsProps> = (): React.ReactElement =
                     variant="outlined"
                     title="Cancel"
                     bgColor={COLORS.blue.navyBlue}
-                    onClick={() => {navigate('/login')}}
+                    onClick={() => {navigate(ROUTES.AUTH.LOGIN)}}
                 />
                 <CommonButton
                     type="submit"

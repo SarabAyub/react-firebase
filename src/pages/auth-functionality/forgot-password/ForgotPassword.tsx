@@ -2,6 +2,7 @@ import { CustomTextField, CommonButton } from '@muc/components';
 import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
+import { ROUTES } from '@muc/routes';
 import { StyledContainer, Heading, ButtonWrapper } from '../login/Login.styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (): React.ReactElement => 
     const navigate = useNavigate();
 
     const onSubmit = (data: any) => {
-        navigate('/reset-password');
+        navigate(ROUTES.AUTH.RESET_PASSWORD);
         console.log(data);
     };
 
@@ -33,7 +34,6 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (): React.ReactElement => 
                             placeHolder="Enter Email..."
                             width="100%"
                             rules={{ required: 'Email is required' }}
-                            fontFamily='Inter , sans-serif'
                         />
                         <CustomTextField
                             name="re-enter-email"
@@ -42,7 +42,6 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (): React.ReactElement => 
                             placeHolder="Re-enter Email..."
                             width="100%"
                             rules={{ required: 'Required' }}
-                            fontFamily='Inter , sans-serif'
                         />
                         <ButtonWrapper>
                             <CommonButton

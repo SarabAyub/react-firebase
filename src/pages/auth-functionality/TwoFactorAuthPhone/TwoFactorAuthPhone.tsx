@@ -2,6 +2,7 @@ import { CustomTextField, CommonButton } from '@muc/components';
 import React from 'react';
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
+import { ROUTES } from '@muc/routes';
 import { ButtonWrapper, Heading, StyledContainer } from '../login/Login.styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +18,7 @@ const TwoFactorAuthPhone: React.FC<TwoFactorAuthPhoneProps> = (): React.ReactEle
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         if (data.phone === '+1234567891') {
-            navigate('/2fa-pin');
+            navigate(ROUTES.AUTH.TWO_FACTOR_AUTH_PIN);
         } else {
             alert('Invalid phone number');
         }
@@ -32,7 +33,7 @@ const TwoFactorAuthPhone: React.FC<TwoFactorAuthPhoneProps> = (): React.ReactEle
                 To set up 2FA for your account, please enter your phone number
             </Heading>
             <FormProvider {...methods}>
-                <form noValidate autoComplete="off" onSubmit={methods.handleSubmit(onSubmit)}>
+                <form noValidate onSubmit={methods.handleSubmit(onSubmit)}>
                     <CustomTextField
                         name="phone-number"
                         label="Phone number"
@@ -40,7 +41,6 @@ const TwoFactorAuthPhone: React.FC<TwoFactorAuthPhoneProps> = (): React.ReactEle
                         placeHolder="+1 000 000 0000"
                         width="100%"
                         rules={{ required: 'Required' }}
-                        fontFamily='Inter , sans-serif'
                     />
                     <ButtonWrapper>
                         <CommonButton

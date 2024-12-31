@@ -2,6 +2,7 @@ import { CustomTextField, CommonButton } from '@muc/components';
 import React from 'react';
 import { useForm, FormProvider, SubmitHandler } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
+import { ROUTES } from '@muc/routes';
 import { ButtonWrapper, FlexSpaceBetweenRow, Heading, StyledButton, StyledContainer } from '../login/Login.styles';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ const TwoFactorAuthPin: React.FC<TwoFactorAuthPinProps> = (): React.ReactElement
 
     const onSubmit: SubmitHandler<FormData> = (data) => {
         if (data.code === '123456') {
-            navigate('/terms-conditions');
+            navigate(ROUTES.AUTH.TERMS_CONDITIONS);
         } else {
             alert('Invalid code');
         }
@@ -42,7 +43,6 @@ const TwoFactorAuthPin: React.FC<TwoFactorAuthPinProps> = (): React.ReactElement
                         placeHolder="000-000"
                         width="100%"
                         rules={{ required: 'Code is required' }}
-                        fontFamily='Inter , sans-serif'
                     />
                     <FlexSpaceBetweenRow>
                         <StyledButton
@@ -51,7 +51,7 @@ const TwoFactorAuthPin: React.FC<TwoFactorAuthPinProps> = (): React.ReactElement
                             onClick={() => navigate('/2fa-phone')}>
                             Resend Code
                         </StyledButton>
-                        <StyledButton fontWeight={400} onClick={() => navigate('/2fa-phone')}>
+                        <StyledButton fontWeight={400} onClick={() => navigate(ROUTES.AUTH.TWO_FACTOR_AUTH_PHONE)}>
                             Try a different number
                         </StyledButton>
                     </FlexSpaceBetweenRow>
