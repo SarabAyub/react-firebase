@@ -6,10 +6,13 @@ import { Route, Routes as ReactRoutes } from "react-router-dom";
 import {
   Login,
   ResetPassword,
-  TwoFactorAuth,
+  ForgotPassword,
+  TwoFactorAuthPhone,
+  TwoFactorAuthPin,
   TermsConditions,
 } from "@muc/pages";
 import ProtectedRoute from "./ProtectedRoute";
+
 const Routes = () => {
   return (
     <ReactRoutes>
@@ -18,7 +21,9 @@ const Routes = () => {
         <Route path="/" element={<Login />} />
         <Route path={ROUTES.AUTH.LOGIN} element={<Login />} />
         <Route path={ROUTES.AUTH.RESET_PASSWORD} element={<ResetPassword />} />
-        <Route path={ROUTES.AUTH.TWO_FACTOR_AUTH} element={<TwoFactorAuth />} />
+        <Route path={ROUTES.AUTH.FORGOT_PASSWORD} element={<ForgotPassword />} />
+        <Route path={ROUTES.AUTH.TWO_FACTOR_AUTH_PHONE} element={<TwoFactorAuthPhone />} />
+        <Route path={ROUTES.AUTH.TWO_FACTOR_AUTH_PIN} element={<TwoFactorAuthPin />} />
         <Route path={ROUTES.AUTH.TERMS_CONDITIONS} element={<TermsConditions />} />
 
         {/* <Route path={ROUTES.AUTH.SIGN_UP} element={<SignupContainer />} />

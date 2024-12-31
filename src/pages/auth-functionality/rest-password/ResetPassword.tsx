@@ -3,13 +3,16 @@ import React from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { COLORS } from '@muc/constant';
 import { StyledContainer, Heading, ButtonWrapper } from '../login/Login.styles';
+import { useNavigate } from 'react-router-dom';
 
 interface ResetPasswordProps { }
 
 const ResetPassword: React.FC<ResetPasswordProps> = (): React.ReactElement => {
     const methods = useForm();
+    const navigate = useNavigate();
 
     const onSubmit = (data: any) => {
+        navigate('/login');
         console.log(data);
     };
 

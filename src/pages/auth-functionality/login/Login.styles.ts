@@ -22,12 +22,23 @@ export const FlexEndRow = styled(Box)`
     width: 100%;
 `;
 
-export const StyledButton = styled(Button)`
+export const FlexSpaceBetweenRow = styled(Box)`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+`;
+
+interface StyledButtonProps {
+    fontWeight?: number;
+    customColor?: string;
+}
+
+export const StyledButton = styled(Button)<StyledButtonProps>`
     text-align: right;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 700;
-    color: ${COLORS.blue.navyBlue}; 
+    font-weight: ${({ fontWeight }) => fontWeight || 700};
+    color: ${({ customColor }) => customColor || COLORS.blue.navyBlue};
     padding: 0;
 `;
 

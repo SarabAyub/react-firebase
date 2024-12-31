@@ -38,14 +38,15 @@ const CustomTextField: React.FC<CustomTextFieldProps> = ({
   const handleClickShowPassword = () => setShowPassword((prev: any) => !prev);
 
   return (
-    <Box width={{ md: width, sm: width, xs: "auto" }} mt={2}>
+    <Box width={{ md: width, sm: width, xs: "auto" }} >
       <InputLabel
       sx={{
-        fontWeight: 500,
+        fontWeight: 600,
         fontSize: "16px",
         color: COLORS.primary.main,
         lineHeight: "20px",
         pb: 2,
+        pt: 2,
         display: "flex",
         alignItems: "center",
         gap: "20px",

@@ -2,7 +2,9 @@ export const ROUTES = {
   AUTH: {
     LOGIN: "/login",
     RESET_PASSWORD: "/reset-password",
-    TWO_FACTOR_AUTH: "/2fa",
+    FORGOT_PASSWORD: "/forgot-password",
+    TWO_FACTOR_AUTH_PHONE: "/2fa-phone",
+    TWO_FACTOR_AUTH_PIN: "/2fa-pin",
     TERMS_CONDITIONS: "/terms-conditions",
   },
   WEB_APP: {
