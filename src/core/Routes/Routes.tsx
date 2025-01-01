@@ -4,7 +4,9 @@ import {
   ManageAdmins,
   ManageReports,
   ManageUsers,
-  AppConfigurations,
+  ManageAppConfigurations,
+  ManageDashboard,
+  ManageMessages,
 } from "@muc/screens";
 import { Route, Routes as ReactRoutes } from "react-router-dom";
 import {
@@ -15,7 +17,11 @@ import {
   TwoFactorAuthPin,
   TermsConditions,
   AdminManagement,
-  Reports
+  Reports,
+  Users,
+  Dashboard,
+  Messages,
+  Settings,
 } from "@muc/pages";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -47,9 +53,27 @@ const Routes = () => {
       <Route path={ROUTES.WEB_APP.MANAGE_ADMIN} element={<AdminManagement />} />
       </Route>
 
+      <Route element={<ManageDashboard />}>
+      <Route path={ROUTES.WEB_APP.DASHBOARD} element={<Dashboard />} />
+      </Route>
+
+      <Route element={<ManageAppConfigurations />}>
+      <Route path={ROUTES.WEB_APP.APP_CONFIGURATIONS} element={<Settings />} />
+      </Route>
+
+      <Route element={<ManageUsers />}>
+      <Route path={ROUTES.WEB_APP.MANAGE_USERS} element={<Users />} />
+      </Route>
+
       <Route element={<ManageReports />}>
       <Route path={ROUTES.WEB_APP.MANAGE_REPORTS} element={<Reports />} />
       </Route>
+
+      <Route element={<ManageMessages />}>
+      <Route path={ROUTES.WEB_APP.MESSAGES} element={<Messages />} />
+      </Route>
+
+
       
     </ReactRoutes>
   );

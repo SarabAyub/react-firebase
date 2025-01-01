@@ -2,7 +2,7 @@ import { AppLayout } from "@muc/layout";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-const AppConfigurations = () => {
+const ManageDashboard = () => {
   return (
     <React.Fragment>
       <AppLayout>
@@ -12,4 +12,4 @@ const AppConfigurations = () => {
   );
 };
 
-export default AppConfigurations;
+export default ManageDashboard;
