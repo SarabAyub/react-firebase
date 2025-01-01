@@ -8,12 +8,13 @@ export const ROUTES = {
     TERMS_CONDITIONS: "/terms-conditions",
   },
   WEB_APP: {
-    PATIENT: "/patients",
-    PROFILE_SUPPORT_CIRCLE: "/profile-support-circle",
-    ANALYTICS: "/analytics",
-    NOTES: "/notes",
-    NOTIFICATIONS: "/notifications",
-    ROOT_SETTINGS: "/settings",
-    SETTINGS: "/settings/:tab",
+    MANAGE_ADMIN: "/manage-admin",
+    ADD_ADMIN: "/add-admin",
+    MANAGE_REPORTS: "/manage-reports",
+    DASHBOARD: "/dashboard",
+    APP_CONFIGURATIONS: "/app-configurations",
+    MANAGE_USERS: "/manage-users",
+    MESSAGES: "/messages", 
+    
   },
 };

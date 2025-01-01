@@ -1,6 +1,10 @@
 import { ROUTES } from "@muc/routes";
 import {
   ManageAuth,
+  ManageAdmins,
+  ManageReports,
+  ManageUsers,
+  AppConfigurations,
 } from "@muc/screens";
 import { Route, Routes as ReactRoutes } from "react-router-dom";
 import {
@@ -10,6 +14,8 @@ import {
   TwoFactorAuthPhone,
   TwoFactorAuthPin,
   TermsConditions,
+  AdminManagement,
+  Reports
 } from "@muc/pages";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -37,6 +43,14 @@ const Routes = () => {
         /> */}
         
       </Route>
+      <Route element={<ManageAdmins />}>
+      <Route path={ROUTES.WEB_APP.MANAGE_ADMIN} element={<AdminManagement />} />
+      </Route>
+
+      <Route element={<ManageReports />}>
+      <Route path={ROUTES.WEB_APP.MANAGE_REPORTS} element={<Reports />} />
+      </Route>
+      
     </ReactRoutes>
   );
 };

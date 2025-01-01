@@ -27,14 +27,14 @@ const AppLayout = (props: Props) => {
       <Box
         component="nav"
         sx={{
-          width: 72,
+          width: 120,
           flexShrink: { sm: 0 },
           height: "98dvh",
         }}
       >
         <Sidebar open={isSideBarOpen} onClose={handleSideBarToggle} />
       </Box>
-      <Box sx={{ position: "absolute", display: { sm: "none", xs: "block" } }}>
+      <Box sx={{ position: "absolute", display: { sm: "none", xs: "block" } , background: 'darkgray'}}>
         <IconButton
           sx={{
             color: COLORS.primary.main,
