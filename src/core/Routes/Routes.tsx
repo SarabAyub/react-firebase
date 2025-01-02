@@ -22,7 +22,7 @@ import {
   Dashboard,
   Messages,
   Settings,
-} from "@muc/pages";
+} from "@muc/modules";
 import ProtectedRoute from "./ProtectedRoute";
 
 const Routes = () => {

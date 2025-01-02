@@ -31,7 +31,7 @@ const Login: React.FC<LoginProps> = (): React.ReactElement => {
                 Login
             </Heading>
             <FormProvider {...methods}>
-                <form noValidate autoComplete="off" onSubmit={methods.handleSubmit(onSubmit)}>
+                <form noValidate onSubmit={methods.handleSubmit(onSubmit)}>
                     <CustomTextField
                         name="email"
                         label="Email"

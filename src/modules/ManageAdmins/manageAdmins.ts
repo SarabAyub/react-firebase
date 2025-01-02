@@ -1,0 +1,1 @@
+export { default as AdminManagement } from './components/Admin-Management/AdminManagement';

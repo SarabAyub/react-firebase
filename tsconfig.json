@@ -24,7 +24,7 @@
       "@muc/firebase": ["src/firebase/firebase.ts"],
       "@muc/models": ["src/firebase/models/models.ts"],
       "@muc/utils": ["src/utils/utils.ts"],
-      "@muc/pages": ["src/pages/pages.ts"],
+      "@muc/pages": ["src/modules/module.ts"],
     },
     /* Bundler mode */
     "moduleResolution": "bundler",
