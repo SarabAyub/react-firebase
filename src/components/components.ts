@@ -4,4 +4,5 @@ export { default as CommonButton } from "./CommonButton/CommonButton";
 export { default as CustomCountryInput } from "./CustomCountryInput/CustomCountryInput";
 export { default as CustomLineChart } from "./CustomLineChart/CustomLineChart";
 export { default as CustomSelect } from "./CustomSelect/CustomSelect";
+export { default as CommonTable } from "./CommonTable/CommonTable";
 // export { default as SnackbarProvider } from "./SnackbarProvider/SnackbarProvider";
