@@ -42,10 +42,10 @@ function AdminManagement() {
       <Typography variant="h1" gutterBottom align="center">
         Admin Management
       </Typography>
-      <CommonTable<RowData> columns={columns} rows={rows} onEdit={handleEdit} onDelete={handleDelete} />
       <Button variant="contained" color="primary" style={{ marginTop: '16px' }}>
-        Add New User
+        Add New Admin
       </Button>
+      <CommonTable<RowData> columns={columns} rows={rows} onEdit={handleEdit} onDelete={handleDelete} />
     </Container>
   );
 }
